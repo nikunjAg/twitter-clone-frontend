@@ -1,0 +1,108 @@
+.Links {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	z-index: 21;
+	background-color: var(--twitter-theme-color);
+	overflow-y: auto;
+}
+
+.MainLinks {
+	flex: 0.45;
+	min-height: 100vh;
+	border: 1px solid var(--twitter-theme-border-color);
+	border-top: none;
+	border-bottom: none;
+}
+
+.LinksHeader {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 5px 8px;
+	/* border-bottom: 1px solid var(--twitter-theme-border-color); */
+	position: sticky;
+	top: 0;
+	z-index: 26;
+	background-color: var(--twitter-theme-color);
+}
+
+.LinksHeader .BackIcon {
+	color: var(--twitter-color);
+	font-size: 2.5rem;
+	padding: 0.5rem;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.LinksHeader .BackIcon:hover {
+	background-color: var(--light-twitter-color);
+}
+
+.LinksHeader .VerifiedIcon {
+	color: var(--twitter-color);
+	font-size: 1rem;
+	margin-left: 3px;
+}
+
+.LinksHeader > div {
+	margin-left: 1rem;
+}
+
+.LinksHeader > div h3 {
+	font-size: 1.1rem;
+}
+
+.LinksHeader > div p {
+	color: var(--twitter-light-text-color);
+	font-size: 0.85rem;
+}
+
+.HorizontalTabs {
+	width: 100%;
+	background-color: var(--twitter-theme-color);
+}
+
+.NoFollowing,
+.NoFollower {
+	padding: 1rem;
+}
+
+.NoFollowing > h3,
+.NoFollower > h3 {
+	text-align: center;
+	font-size: 1rem;
+	color: var(--twitter-text-color);
+	margin: 0.4rem 0rem;
+}
+
+.NoFollowing > p,
+.NoFollower > p {
+	text-align: center;
+	color: var(--twitter-light-text-color);
+	font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+	.MainLinks {
+		flex: 0.55;
+	}
+}
+
+@media (max-width: 700px) {
+	.MainLinks {
+		flex: 0.65;
+	}
+}
+
+@media (max-width: 600px) {
+	.MainLinks {
+		flex: 0.8;
+	}
+}

@@ -1,0 +1,128 @@
+.ModalHeader {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	/* height: 9vh; */
+	padding: 10px 0px;
+	border-bottom: 0.1rem solid #000;
+}
+
+.ModalHeader .TwitterIcon {
+	color: var(--twitter-color);
+	font-size: 1.5rem;
+}
+
+.ModalContent {
+	overflow-y: auto;
+	/* height: 76vh; */
+}
+
+.MContent {
+	margin: 16px 10px;
+	height: calc(100% - 32px);
+}
+
+.ModalContent h2 {
+	color: var(--twitter-text-color);
+	padding-left: 1rem;
+	margin-bottom: 1rem;
+}
+
+.PostInteraction {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	color: var(--twitter-light-text-color);
+	padding-top: 0.2rem;
+}
+
+.PostActivity {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	font-size: 0.85rem;
+	cursor: pointer;
+}
+
+.PostActivity.CompPostActivity {
+	justify-content: center;
+}
+
+.PostActivity span {
+	padding-left: 3px;
+}
+
+.PostActivity .Icon {
+	font-size: 2.4rem;
+	padding: 10px;
+}
+
+.PostActivity.CompPostActivity .Icon {
+	font-size: 2.5rem;
+}
+
+.Comment {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Comment .Icon {
+	font-size: 2.2rem;
+}
+
+.PostActivity:hover .Comment {
+	color: #1da1f2;
+	background-color: #1da1f226;
+	border-radius: 50%;
+}
+
+.IsCommented {
+	color: #1da1f2;
+}
+
+.PostActivity:hover .Retweet {
+	color: #17bf63;
+	background-color: #17bf6317;
+	border-radius: 50%;
+}
+
+.IsRetweeted {
+	color: #17bf63;
+}
+
+.PostActivity:hover .Like {
+	color: #e0245e;
+	background-color: #e0245e1c;
+	border-radius: 50%;
+}
+
+.IsLiked {
+	color: #e0245e;
+}
+
+.PostActivity:hover .Share {
+	color: #1da0f2;
+	background-color: #1da0f21a;
+	border-radius: 50%;
+}
+
+.IsShared {
+	color: #1da0f2;
+}
+
+.PostActivity:hover .CommentCount {
+	color: #1da1f2;
+}
+.PostActivity:hover .RetweetCount {
+	color: #17bf63;
+}
+.PostActivity:hover .LikeCount {
+	color: #e0245e;
+}

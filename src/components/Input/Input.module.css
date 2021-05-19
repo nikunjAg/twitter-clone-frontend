@@ -1,0 +1,47 @@
+.Input {
+	width: 100%;
+	margin-bottom: 0.7rem;
+}
+
+.Input > label {
+	display: inline-block;
+	color: var(--twitter-light-text-color);
+	font-size: 0.85rem;
+	margin-bottom: 4px;
+}
+
+.InputElement {
+	width: 100%;
+	outline: none;
+	border: 1px solid var(--twitter-theme-dark-border-color);
+	border-radius: 4px;
+	color: var(--twitter-text-color);
+	font-size: 1rem;
+	font-family: inherit;
+	padding: 0.5rem 0.7rem;
+}
+
+.InputElement:focus {
+	border-color: var(--twitter-color);
+}
+
+/* Order matters after InputElement:focus */
+.InputElement.Error {
+	border-color: var(--twitter-error-color);
+}
+
+.Input > small {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	font-size: 0.8rem;
+	color: var(--twitter-error-color);
+}
+
+.Input .Icon {
+	color: var(--twitter-error-color);
+	margin-right: 4px;
+	font-size: 1rem;
+	margin-top: 3px;
+}

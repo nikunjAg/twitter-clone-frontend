@@ -1,0 +1,175 @@
+.Editor {
+	display: block;
+	resize: none;
+	font-family: inherit;
+	width: 100% !important;
+	height: 36px;
+	overflow-y: scroll;
+	border: none;
+	outline: none;
+	background: transparent;
+	font-size: 1rem;
+	font-weight: 400;
+	color: var(--twitter-text-color);
+	margin-top: 0.4rem;
+	margin-bottom: 0.4rem;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	cursor: text;
+}
+
+.Editor::-webkit-scrollbar {
+	display: none;
+}
+
+.pell-actionbar {
+	border: none;
+}
+
+.pell-content {
+	height: 36px;
+	padding: 0;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.pell-content::-webkit-scrollbar {
+	display: none;
+}
+
+img.emoji {
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: bottom;
+	/* margin: 0px 3px;
+  padding: 0px 3px; */
+	width: 18px;
+	height: 18px;
+	background-size: 1em;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	background-position: 50%, 50%;
+}
+
+span.emoji-sizer {
+	line-height: 0.81em;
+	font-size: 1em;
+	margin: -2px 0;
+}
+
+span.emoji-outer {
+	display: -moz-inline-box;
+	display: inline-block;
+	*display: inline;
+	height: 1em;
+	width: 1em;
+}
+
+span.emoji-inner {
+	display: -moz-inline-box;
+	display: inline-block;
+	text-indent: -9999px;
+	width: 100%;
+	height: 100%;
+	vertical-align: baseline;
+	*vertical-align: auto;
+	*zoom: 1;
+}
+
+.PostAction {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	position: relative;
+}
+
+.PostAction .Icon {
+	cursor: pointer;
+	font-size: 22px;
+	color: var(--twitter-color);
+}
+
+.PostAction .Icon {
+	margin-right: 10px;
+}
+
+.PostAction button {
+	margin-left: auto;
+}
+
+/* aside.emoji-picker-react { */
+.EmojiPicker {
+	position: absolute;
+	top: 100%;
+	z-index: 101;
+}
+
+.pell-content:empty:before {
+	content: "What's Happenning?";
+	opacity: 0.7;
+}
+
+.NewPostImagesPreview {
+	height: 180px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-bottom: 0.5rem;
+}
+
+.ImageDiv {
+	position: relative;
+	border-radius: 4px;
+	padding: 1px;
+	overflow: hidden;
+	/* As this component may also be used in modals */
+	/* z-index: 200; */
+}
+
+.ImageDiv::after {
+	border-radius: 4px;
+	position: absolute;
+	content: '';
+	/* Because of padding */
+	top: 1px;
+	left: 1px;
+	width: calc(100% - 1px - 1px);
+	height: calc(100% - 1px - 1px);
+	background-color: rgba(0, 0, 0, 0.13);
+}
+
+.ImageDiv .RemoveImageIcon {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	color: var(--twitter-theme-color);
+	cursor: pointer;
+	z-index: 201;
+	display: none;
+	padding: 3px;
+	border-radius: 50%;
+	background-color: transparent;
+	transition: background-color 0.2s ease-out;
+}
+
+.ImageDiv:hover .RemoveImageIcon {
+	display: inline-block;
+}
+
+.RemoveImageIcon:hover {
+	background-color: rgba(0, 0, 0, 0.13);
+}
+
+.ImageDiv > img {
+	width: 100%;
+	height: 100%;
+	object-fit: scale-down;
+}
+
+.NewPostImagePicker {
+	display: none;
+}

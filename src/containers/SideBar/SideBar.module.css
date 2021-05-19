@@ -1,0 +1,121 @@
+.SideBar {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 0rem 0.8rem 0.5rem 3rem;
+	/* border-right: 1px solid var(--twitter-theme-border-color); */
+}
+
+.SideBar .Logo {
+	color: var(--twitter-color);
+	font-size: 3.3rem;
+	padding: 10px;
+}
+
+.SideBar .Logo:hover {
+	border-radius: 50%;
+	background-color: var(--light-twitter-color);
+}
+
+.SideBar button svg {
+	display: none;
+}
+
+.Profile {
+	width: 100%;
+	cursor: pointer;
+	margin-top: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border-radius: 30px;
+	padding: 8px 10px;
+}
+
+.Profile:hover {
+	/* background-color: rgba(28, 160, 242, 0.1); */
+	background-color: var(--light-twitter-color);
+}
+
+.Profile .ProfileIcon {
+	color: var(--twitter-light-text-color);
+	width: 3rem;
+	height: 3rem;
+}
+
+.User {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	margin-left: 0.5rem;
+}
+
+.Name {
+	color: var(--twitter-text-color);
+	font-weight: 600;
+	font-size: 0.85rem;
+}
+
+.UserName {
+	color: var(--twitter-light-text-color);
+	/* margin-top: 5px; */
+	font-size: 0.8rem;
+}
+
+.Profile .ProfileMore {
+	margin-left: auto;
+	font-size: 1rem;
+	color: var(--twitter-text-color);
+	cursor: pointer;
+}
+
+@media (max-width: 900px) {
+	.SideBar {
+		padding: 0rem 0.8rem 0.5rem 2.5rem;
+	}
+
+	.SideBar button {
+		padding: 12px;
+		width: fit-content !important;
+		border-radius: 50%;
+	}
+
+	.SideBar button svg {
+		display: block;
+		font-size: 1.5rem;
+	}
+
+	.Profile {
+		padding: 0px;
+		width: auto;
+	}
+
+	.Profile .ProfileIcon {
+		color: var(--twitter-light-text-color);
+		width: 3.1rem;
+		height: 3.1rem;
+	}
+
+	.SideBar button p,
+	.SideBar .User,
+	.SideBar .ProfileMore {
+		display: none;
+	}
+}
+
+@media (max-width: 700px) {
+	.SideBar {
+		padding: 0rem 0.8rem 0.5rem 2.2rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.SideBar {
+		align-items: flex-end;
+		padding: 0rem 0.8rem 0.5rem 2.5rem;
+	}
+}

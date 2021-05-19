@@ -1,0 +1,29 @@
+.Navigation {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-bottom: 0.5rem;
+}
+
+.Navigation .Icon {
+	font-size: 1.6rem;
+	color: inherit;
+}
+
+.Navigation p {
+	font-weight: 700;
+	font-size: 1.2rem;
+	margin: 0 0.7rem;
+}
+
+/* // #1da1f2 */
+/* 29 161 242 0.1 */
+
+@media (max-width: 900px) {
+	.Navigation .Icon {
+		font-size: 1.8rem;
+	}
+	.Navigation p {
+		display: none;
+	}
+}

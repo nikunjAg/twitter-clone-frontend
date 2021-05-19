@@ -1,0 +1,41 @@
+body {
+	--twitter-color: #1da1f2;
+	--dark-twitter-color: #1a91da;
+	--light-twitter-color: #1ca0f21a;
+	--twitter-text-color: #000;
+	--twitter-light-text-color: #7e7f80;
+	--twitter-extra-light-blue-text-color: #5b7083;
+	--twitter-theme-color: #ffffff;
+	--twitter-theme-border-color: #ebeef0;
+	--twitter-theme-dark-border-color: #c4cfd6;
+	--twitter-theme-background-color: #00000008;
+	--twitter-theme-light-background-color: #f9fafb;
+	--twitter-theme-thread-color: #c4cfd6;
+	--twitter-error-color: red;
+}
+
+.DarkTheme {
+	--twitter-color: #1da1f2;
+	--dark-twitter-color: #1a91da;
+	--light-twitter-color: #1ca0f21a;
+	--twitter-text-color: #fff;
+	--twitter-light-text-color: #ccc;
+	--twitter-extra-light-blue-text-color: #5b7083;
+	--twitter-theme-color: #000;
+	--twitter-theme-border-color: #ebeef0;
+	--twitter-theme-light-background-color: #f9fafb;
+	--twitter-theme-thread-color: #c4cfd6;
+}
+
+.App {
+	/* max-width: 1300px; */
+	margin: 0 auto;
+}
+
+.SidebarWrapper {
+	flex: 0.233;
+	position: sticky;
+	top: 0;
+	left: 0;
+	height: 100%;
+}

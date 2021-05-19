@@ -1,0 +1,58 @@
+.ModalContent {
+	width: 100%;
+	padding: 1.5rem 2rem;
+	background-color: var(--twitter-theme-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	border-radius: 8px;
+}
+
+.ModalContent > h3 {
+	color: var(--twitter-text-color);
+	margin-bottom: 0.8rem;
+}
+
+.ModalContent > p {
+	color: var(--twitter-light-text-color);
+	text-align: center;
+	margin-bottom: 1rem;
+	font-size: 0.9rem;
+}
+
+.ModalActions {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.ModalActions > button {
+	outline: none;
+	padding: 10px 20px;
+	font-size: 0.9rem;
+	border-radius: 16px;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+}
+
+.ModalActions button:first-child {
+	background-color: var(--twitter-theme-thread-color);
+	color: var(--twitter-text-color);
+}
+
+.ModalActions button:first-child:hover {
+	background-color: var(--twitter-extra-light-blue-text-color);
+}
+
+.ModalActions button:last-child {
+	background-color: #e0245e;
+	color: var(--twitter-theme-color);
+}
+
+.ModalActions button:last-child:hover {
+	background-color: #bd2152;
+}

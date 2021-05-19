@@ -1,0 +1,46 @@
+.User {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 10px 5px;
+	border-bottom: 1px solid var(--twitter-theme-border-color);
+}
+
+.ProfileImage,
+.DisplayName {
+	display: inline-block;
+	text-decoration: none;
+}
+
+.ProfileImage img {
+	width: 40px;
+	height: 40px;
+}
+
+.UserData {
+	flex: 1;
+	padding: 0px 8px;
+}
+
+.DisplayName {
+	font-size: 0.85rem;
+	font-weight: bold;
+	color: var(--twitter-text-color);
+	border-bottom: 1px solid transparent;
+	transition: border-color 0.2s ease-out;
+}
+
+.DisplayName:hover {
+	border-color: var(--twitter-text-color);
+}
+
+.Username {
+	font-size: 0.85rem;
+	color: var(--twitter-light-text-color);
+}
+
+.ShortBio {
+	font-size: 0.85rem;
+	color: var(--twitter-text-color);
+}

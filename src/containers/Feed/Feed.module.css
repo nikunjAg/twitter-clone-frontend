@@ -1,0 +1,18 @@
+.Feed {
+	width: 100%;
+}
+
+.NoFeed {
+	text-align: center;
+	padding: 1rem;
+}
+
+.NoFeed h3 {
+	color: var(--twitter-text-color);
+	margin: 1rem 0rem;
+}
+
+.NoFeed p {
+	color: var(--twitter-light-text-color);
+	font-size: 14px;
+}

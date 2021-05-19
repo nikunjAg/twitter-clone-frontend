@@ -1,0 +1,7 @@
+TODO
+1. Try getting the logged in user data from the database into the redux store when the user enters the application.
+
+
+BETTER
+1. Try to normalize the redux store
+2. Check the routes by directly visiting them

@@ -1,0 +1,34 @@
+.SearchBar {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--twitter-theme-border-color);
+	padding: 0.3rem 1.1rem;
+	border-radius: 1.3rem;
+	border: 1px solid var(--twitter-theme-border-color);
+	color: var(--twitter-light-text-color);
+}
+
+.SearchBar:focus-within {
+	color: var(--twitter-color);
+	background-color: var(--twitter-theme-color);
+	border-color: var(--twitter-color);
+}
+
+.SearchBar .Icon {
+	/* Linked to parent color */
+	color: inherit;
+	margin-right: 1rem;
+}
+
+.SearchBar > input {
+	outline: none;
+	border: none;
+	height: 100%;
+	flex: 1;
+	background-color: transparent;
+	font-size: 1rem;
+	font-family: inherit;
+}

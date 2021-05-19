@@ -1,0 +1,60 @@
+.Login {
+	width: 33%;
+	margin: 0 auto;
+	padding: 1rem 0rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.Login .Icon {
+	color: var(--twitter-color);
+	font-size: 2rem;
+}
+
+.Login > h2 {
+	margin: 1rem 0rem;
+}
+
+.LoginForm {
+	width: 100%;
+}
+
+.OneLiner {
+	margin-top: 10px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	color: var(--twitter-color);
+}
+
+.OneLiner > a {
+	color: inherit;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.OneLiner p {
+	padding: 0 3px;
+}
+
+@media (max-width: 800px) {
+	.Login {
+		width: 45%;
+	}
+}
+
+@media (max-width: 600px) {
+	.Login {
+		width: 65%;
+	}
+}
+
+@media (max-width: 500px) {
+	.Login {
+		width: 74%;
+	}
+}

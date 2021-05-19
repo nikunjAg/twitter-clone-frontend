@@ -1,0 +1,28 @@
+.CustomNavLink {
+	border-radius: 30px;
+	overflow: hidden;
+	color: var(--twitter-text-color);
+	background-color: transparent;
+	transition: background-color 0.1s ease-out;
+}
+
+.CustomNavLink > a,
+.CustomNavLink .FakeLink {
+	cursor: pointer;
+	text-decoration: none;
+	color: inherit;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 10px;
+}
+
+.CustomNavLink:hover {
+	background-color: var(--light-twitter-color);
+	color: var(--twitter-color);
+}
+
+.CustomNavLink.Active {
+	color: var(--twitter-color);
+}

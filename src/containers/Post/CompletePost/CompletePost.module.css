@@ -1,0 +1,225 @@
+.CompletePost::-webkit-scrollbar {
+	display: none;
+}
+
+.CompletePost {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 5;
+	overflow-y: scroll;
+	-ms-scrollbar-width: none;
+	scrollbar-width: none;
+	background-color: var(--twitter-theme-color);
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: flex-start;
+	z-index: 50;
+}
+
+.SpinnerWrapper {
+	margin: 20px auto;
+}
+
+.PostWrapper {
+	flex: 0.66;
+	min-height: 100vh;
+}
+
+.TweetHeader {
+	position: sticky;
+	top: 0;
+	background-color: var(--twitter-theme-color);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0.6rem 1rem;
+	border: 1px solid var(--twitter-theme-border-color);
+	border-top: none;
+	z-index: 56;
+}
+
+.TweetHeader .BackIcon {
+	cursor: pointer;
+	color: var(--twitter-color);
+	font-size: 2.2rem;
+	padding: 6px;
+	border-radius: 50%;
+}
+
+.TweetHeader .BackIcon:hover {
+	background-color: var(--light-twitter-color);
+}
+
+.TweetHeader > h3 {
+	margin-left: 1rem;
+	color: var(--twitter-text-color);
+	cursor: pointer;
+}
+
+.CurrentPost {
+	border: 1px solid var(--twitter-theme-border-color);
+	padding: 10px 12px;
+}
+
+.PostAddOn {
+	color: var(--twitter-light-text-color);
+	/* padding-left: 1rem; */
+	padding-left: 1.5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.PostAddOn .Icon {
+	margin-right: 0.8rem;
+	font-size: 0.9rem;
+}
+
+.PostAddOn > a {
+	font-size: 0.85rem;
+	font-weight: 600;
+	text-decoration: none;
+	color: var(--twitter-light-text-color);
+}
+
+.PostAddOn > a:hover {
+	text-decoration: underline;
+}
+
+.PostHeader {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.PostHeader .ProfileIcon {
+	padding: 4px 0px;
+}
+
+.PostHeader .UserDetails {
+	flex: 1;
+	padding: 0 10px;
+	font-size: 1rem;
+}
+
+.PostHeader .FirstRow {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.FirstRow .DisplayName {
+	display: inline-block;
+	font-weight: bold;
+}
+
+.DisplayName > a {
+	text-decoration: none;
+	color: var(--twitter-text-color);
+}
+
+.DisplayName > a:hover {
+	text-decoration: underline;
+}
+
+.UserDetails .VerifiedIcon {
+	color: var(--twitter-color);
+	font-size: 1rem;
+	margin-left: 3px;
+}
+
+.UserDetails > p {
+	font-weight: 400;
+	font-size: 0.85rem;
+	color: var(--twitter-light-text-color);
+}
+
+.PostContent {
+	padding: 10px 0px;
+}
+
+.PostContent > div,
+.PostContent > div span {
+	font-size: 1.2rem !important;
+	font-weight: 400;
+	color: var(--twitter-text-color);
+}
+
+.PostImages {
+	width: 100%;
+	height: 180px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 0.6rem;
+}
+
+.PostImageDiv {
+	position: relative;
+	border-radius: 4px;
+	padding: 1px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.PostImageDiv::after {
+	border-radius: 4px;
+	position: absolute;
+	content: '';
+	/* Because of padding */
+	top: 1px;
+	left: 1px;
+	width: calc(100% - 1px - 1px);
+	height: calc(100% - 1px - 1px);
+	background-color: rgba(0, 0, 0, 0.13);
+}
+
+.PostImageDiv > img {
+	width: 100%;
+	height: 100%;
+	object-fit: scale-down;
+}
+
+.PostTimestamp {
+	padding: 10px 0px;
+	color: var(--twitter-light-text-color);
+	font-size: 0.9rem;
+}
+
+.PostActivity {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 10px 0px;
+	border: 1px solid var(--twitter-theme-border-color);
+	border-left: none;
+	border-right: none;
+}
+
+.PostActivity > p > b {
+	color: var(--twitter-text-color);
+}
+
+.PostActivity p:not(:last-child) {
+	margin-right: 1rem;
+}
+
+.PostActivity span {
+	font-size: 1rem;
+	margin-left: 5px;
+	color: var(--twitter-light-text-color);
+}
+
+@media (max-width: 900px) {
+	.PostWrapper {
+		flex: 0.7;
+	}
+}

@@ -1,0 +1,37 @@
+.NewPost {
+	width: 100%;
+	position: relative;
+	padding: 1rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border: 1px solid var(--twitter-theme-border-color);
+}
+
+.NewPost::after {
+	content: '';
+	display: block;
+	width: 100%;
+	/* background-color: #15181c; */
+	background-color: #f7f9fa;
+	border-top: 1px solid #ebeef0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 6px;
+}
+
+.NewPost .AccountIcon {
+	align-self: flex-start;
+	color: var(--twitter-light-text-color);
+	font-size: 2.2rem;
+	margin-right: 0.5rem;
+}
+
+.Post {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

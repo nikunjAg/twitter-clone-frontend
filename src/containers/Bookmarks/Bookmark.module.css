@@ -1,0 +1,101 @@
+.Bookmark {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex: 1;
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	z-index: 11;
+	background-color: var(--twitter-theme-color);
+}
+
+.MainBookmarks {
+	flex: 0.437;
+	/* display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start; */
+	min-height: 100vh;
+	border: 1px solid var(--twitter-theme-border-color);
+	border-top: none;
+	border-bottom: none;
+}
+
+.BookmarkHeader {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 5;
+	background-color: var(--twitter-theme-color);
+	padding: 5px 8px;
+	border-bottom: 1px solid var(--twitter-theme-border-color);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.BookmarkHeader .BackIcon {
+	color: var(--twitter-color);
+	font-size: 2.5rem;
+	padding: 0.5rem;
+	border-radius: 50%;
+	cursor: pointer;
+	margin-right: 0.6rem;
+}
+
+.BookmarkHeader .BackIcon:hover {
+	background-color: var(--light-twitter-color);
+}
+
+.BookmarkHeader > div {
+	cursor: pointer;
+}
+
+.BookmarkHeader h3 {
+	color: var(--twitter-text-color);
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+.BookmarkHeader p {
+	color: var(--twitter-light-text-color);
+	font-size: 0.85rem;
+}
+
+.NoResults {
+	padding: 1rem;
+	color: var(--twitter-light-text-color);
+	text-align: center;
+	font-size: 0.9rem;
+}
+
+.NoResults > h3 {
+	color: var(--twitter-text-color);
+	margin-bottom: 0.5rem;
+}
+
+@media (max-width: 900px) {
+	.MainBookmarks {
+		flex: 0.55;
+	}
+}
+
+@media (max-width: 700px) {
+	.MainBookmarks {
+		flex: 0.65;
+	}
+}
+
+@media (max-width: 600px) {
+	.MainBookmarks {
+		flex: 0.8;
+	}
+}

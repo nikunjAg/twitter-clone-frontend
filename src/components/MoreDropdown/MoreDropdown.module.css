@@ -1,0 +1,20 @@
+.MoreDropdown {
+	position: relative;
+	padding: 3px;
+	border-radius: 50%;
+	line-height: 100%;
+}
+
+.MoreDropdown .MoreIcon {
+	color: var(--twitter-extra-light-blue-text-color);
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+.MoreDropdown:hover {
+	background-color: var(--light-twitter-color);
+}
+
+.MoreDropdown:hover .MoreIcon {
+	color: var(--twitter-color);
+}

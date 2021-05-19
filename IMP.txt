@@ -1,0 +1,18 @@
+Z-Index
+Increasing going down
+
+Home Component Lowest Level
+Z-Index Increases by 10
+
+
+
+Dropdown Z-Index = 100
+
+Modal Z-Index = 150
+Backdrop Z-Index = 150
+
+
+Common USE Cases
+
+1. Spinner with Loaded Data
+  Try to create seperate variables for both, because if we create a single variable then in case of nested components the spinner activation in second component will also make the spinner show in first component, and when the spinner stops and then when we navigate back to the first component now there loaded data will loose its scrolling and would be displayed from the start

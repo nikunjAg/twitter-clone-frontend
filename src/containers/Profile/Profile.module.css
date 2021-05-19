@@ -1,0 +1,290 @@
+.Profile::-webkit-scrollbar {
+	display: none;
+}
+
+.Profile {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: flex-start;
+	overflow-y: scroll;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	z-index: 11;
+	background-color: var(--twitter-theme-color);
+}
+
+.MainProfile {
+	flex: 0.45;
+	min-height: 100vh;
+	border: 1px solid var(--twitter-theme-border-color);
+	border-top: none;
+	border-bottom: none;
+}
+
+.ProfileHeader {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 5px 8px;
+	border-bottom: 1px solid var(--twitter-theme-border-color);
+	position: sticky;
+	top: 0;
+	z-index: 16;
+	background-color: var(--twitter-theme-color);
+}
+
+.ProfileHeader .BackIcon {
+	color: var(--twitter-color);
+	font-size: 2.5rem;
+	padding: 0.5rem;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.ProfileHeader .BackIcon:hover {
+	background-color: var(--light-twitter-color);
+}
+
+.ProfileHeader .VerifiedIcon {
+	color: var(--twitter-color);
+	font-size: 1rem;
+	margin-left: 3px;
+}
+
+.ProfileHeader > div {
+	margin-left: 1rem;
+}
+
+.ProfileHeader > div h3 {
+	font-size: 1.1rem;
+}
+
+.ProfileHeader > div p {
+	color: var(--twitter-light-text-color);
+	font-size: 0.85rem;
+}
+
+.ProfileDetails {
+	width: 100%;
+	background-color: var(--twitter-theme-color);
+}
+
+.ProfileBanner {
+	width: 100%;
+	height: 14rem;
+	background-color: rgba(26, 26, 26, 0.15);
+}
+
+.ProfileBanner > img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.ProfileInfo {
+	padding: 0.5rem 0.9rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.ProfileActions {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.ProfileImage {
+	width: 130px;
+	height: 130px;
+	background-color: var(--twitter-theme-color);
+	border-radius: 50%;
+	margin-top: -65px;
+	padding: 3px;
+	cursor: pointer;
+	position: relative;
+}
+
+.Overlay {
+	position: absolute;
+	/* 6px for padding removal of 3px by .ProfileImage */
+	width: calc(100% - 6px);
+	height: calc(100% - 6px);
+	left: 3px;
+	top: 3px;
+	border-radius: 50%;
+	z-index: 15;
+}
+
+.Overlay:hover {
+	background-color: rgba(26, 26, 26, 0.15);
+}
+
+.ProfileImage > img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	border-radius: 50%;
+	z-index: 14;
+}
+
+.Actions {
+	float: right;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	padding-top: 5px;
+}
+
+.IconOutline {
+	cursor: pointer;
+	padding: 0.4rem;
+	border-radius: 50%;
+	border: 1px solid var(--twitter-color);
+	margin-right: 0.5rem;
+	line-height: 100%;
+}
+
+.IconOutline:hover {
+	background-color: var(--light-twitter-color);
+}
+
+.IconOutline .Icon {
+	color: var(--twitter-color);
+	font-size: 1.5rem;
+}
+
+.ProfileUserDetails {
+	width: 100%;
+}
+
+.DisplayName {
+	font-size: 1.1rem;
+	color: var(--twitter-text-color);
+	display: inline-block;
+	font-weight: 700;
+	margin-right: 3px;
+}
+
+.ProfileUserDetails .VerifiedIcon {
+	color: var(--twitter-color);
+	font-size: 1.1rem;
+}
+
+.Username {
+	color: var(--twitter-light-text-color);
+	font-size: 0.95rem;
+}
+
+.ShortBio {
+	margin: 0.5rem 0rem;
+	font-size: 0.85rem;
+	color: var(--twitter-text-color);
+}
+
+.ExtraDetails {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/* justify-content: space-around; */
+}
+
+.Detail {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	margin-right: 1rem;
+}
+
+.Detail .ExtraIcon {
+	color: var(--twitter-light-text-color);
+	font-size: 1rem;
+	margin-right: 4px;
+}
+
+.Detail > span {
+	font-size: 0.85rem;
+	color: var(--twitter-light-text-color);
+}
+
+.UsersLabels {
+	display: inline-block;
+	color: var(--twitter-text-color);
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+	transition: border-color 0.2s ease-out;
+}
+
+.UsersLabels:hover {
+	border-color: var(--twitter-text-color);
+}
+
+.UsersLabels > span:first-child {
+	font-weight: bold;
+	margin-right: 3px;
+}
+
+.UsersLabels > span:last-child {
+	color: var(--twitter-light-text-color);
+	font-size: 0.88rem;
+}
+
+.PostsTabs {
+	width: 100%;
+	background-color: var(--twitter-theme-color);
+	/* border: 1px solid var(--twitter-theme-border-color);
+	border-top: none;
+	border-bottom: none; */
+}
+
+.InvalidProfile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 0rem;
+}
+
+.InvalidProfile > p {
+	color: var(--twitter-light-text-color);
+	font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+	.MainProfile {
+		flex: 0.55;
+	}
+
+	.ProfileImage {
+		width: 110px;
+		height: 110px;
+	}
+}
+
+@media (max-width: 700px) {
+	.MainProfile {
+		flex: 0.65;
+	}
+
+	.ProfileImage {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@media (max-width: 600px) {
+	.MainProfile {
+		flex: 0.8;
+	}
+}
