@@ -32,7 +32,7 @@ class MoreDropdown extends Component {
 				)}
 				{this.state.openDropdown ? (
 					<Dropdown
-						posStyle={{ bottom: '0%', left: '50%' }}
+						posStyle={this.props.posStyle}
 						handleCloseDropdown={this.onCloseMoreDropdown}
 						items={this.props.items}
 						onItemSelected={this.onDropdownItemSelected}

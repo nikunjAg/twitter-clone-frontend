@@ -409,7 +409,7 @@ class Profile extends Component {
 			<div className={classes.Profile}>
 				{errorMessage}
 				{profileEditModal}
-				<div className="SidebarWrapper">
+				<div className="SidebarWrapper" style={{ zIndex: 17 }}>
 					<SideBar scrollHandler={this.windowScrollToTop} />
 				</div>
 				<div className={classes.MainProfile} ref={this.myRef}>

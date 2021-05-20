@@ -12,7 +12,6 @@ import Navigation from '../../components/Navigation/Navigation';
 import Button from '../../components/Button/Button';
 import Dropdown from '../../components/Dropdown/Dropdown';
 import * as actionCreator from '../../store/actions';
-import Backdrop from '../../components/Backdrop/Backdrop';
 
 const moreDropdownItems = [
 	{
@@ -46,14 +45,12 @@ class SideBar extends Component {
 		let moreDropdown = null;
 
 		moreDropdown = (
-			// <Backdrop>
 			<Dropdown
-				posStyle={{ top: '0%', left: '50%' }}
+				posStyle={{ top: '0%', left: '100%', transform: 'translateY(-50%)' }}
 				items={moreDropdownItems}
 				onItemSelected={this.onItemTypeSelected}
 				handleCloseDropdown={this.closeMoreDropdown}
 			/>
-			// </Backdrop>
 		);
 
 		return (

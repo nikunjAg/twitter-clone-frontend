@@ -31,11 +31,3 @@ body {
 	/* max-width: 1300px; */
 	margin: 0 auto;
 }
-
-.SidebarWrapper {
-	flex: 0.233;
-	position: sticky;
-	top: 0;
-	left: 0;
-	height: 100%;
-}

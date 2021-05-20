@@ -111,6 +111,11 @@ html {
 	top: 0;
 	left: 0;
 	height: 100%;
+	/*
+		To ensure that dropdown and its overlay remain on top of component header
+		This value has also to be less than z-index of dropdown and overlay
+		We need to have a z-index value relative header
+	*/
 }
 
 .Recommendations {

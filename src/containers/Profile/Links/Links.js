@@ -126,7 +126,7 @@ class Links extends Component {
 
 		return (
 			<div className={classes.Links}>
-				<div className="SidebarWrapper">
+				<div className="SidebarWrapper" style={{ zIndex: 27 }}>
 					<SideBar />
 				</div>
 				<div className={classes.MainLinks}>

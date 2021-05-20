@@ -74,7 +74,7 @@ class Search extends Component {
 
 		return (
 			<div className={classes.Bookmark}>
-				<div className="SidebarWrapper">
+				<div className="SidebarWrapper" style={{ zIndex: 6 }}>
 					<SideBar scrollHandler={this.windowScrollToTop} />
 				</div>
 				<div className={classes.MainBookmarks} ref={this.myRef}>

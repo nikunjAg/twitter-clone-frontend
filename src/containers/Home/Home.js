@@ -34,7 +34,7 @@ class Home extends Component {
 	render() {
 		return (
 			<div className={classes.Home}>
-				<div className="SidebarWrapper">
+				<div className="SidebarWrapper" style={{ zIndex: 6 }}>
 					<SideBar scrollHandler={this.windowScrollToTop} />
 				</div>
 				<div className={classes.MainHome} ref={this.myRef}>

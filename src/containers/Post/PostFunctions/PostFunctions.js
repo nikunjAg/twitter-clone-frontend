@@ -166,6 +166,7 @@ class PostFunctions extends Component {
 		return (
 			<div className={classes.PostFunctions}>
 				<MoreDropdown
+					posStyle={this.props.posStyle}
 					items={
 						this.props.ownerPost ? ownerPostFunctions : othersPostFunctions
 					}

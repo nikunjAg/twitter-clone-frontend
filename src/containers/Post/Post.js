@@ -180,6 +180,7 @@ class Post extends Component {
 						</p>
 						<div className={classes.MoreIcon}>
 							<PostFunctions
+								posStyle={{ top: '50%', left: '0%' }}
 								ownerPost={
 									this.props.post.postedBy.username === this.props.username
 								}

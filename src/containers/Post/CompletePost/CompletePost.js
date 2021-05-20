@@ -108,6 +108,7 @@ class CompletePost extends Component {
 						</div>
 						<div className={classes.MoreIcon}>
 							<PostFunctions
+								posStyle={{ top: '100%', right: '0%' }}
 								ownerPost={
 									this.props.post.postedBy.username === this.props.username
 								}
@@ -210,7 +211,7 @@ class CompletePost extends Component {
 		return (
 			<div className={classes.CompletePost}>
 				{imagePreview}
-				<div className="SidebarWrapper">
+				<div className="SidebarWrapper" style={{ zIndex: 57 }}>
 					<SideBar />
 				</div>
 				<div className={classes.PostWrapper} ref={this.myRef}>
