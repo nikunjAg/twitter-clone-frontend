@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import TwitterIcon from '@material-ui/icons/Twitter';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import Button from '../../../components/Button/Button';
 
 import './SignUp.css';
 import AuthInput from '../AuthInput';
 import Spinner from '../../../components/Spinner/Spinner';
+import Logo from '../../../Logo';
 
 const UserPassword = (props) => {
 	return (
@@ -16,7 +16,7 @@ const UserPassword = (props) => {
 					className="Icon BackIcon"
 					onClick={props.prevStepHandler}
 				/>
-				<TwitterIcon className="Icon" />
+				<Logo className="Icon" />
 			</div>
 			<div className="ModalContent">
 				<h2>Create Password</h2>

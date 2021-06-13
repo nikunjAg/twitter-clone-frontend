@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import TwitterIcon from '@material-ui/icons/Twitter';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 
 import './SignUp.css';
 import Button from '../../../components/Button/Button';
+import Logo from '../../../Logo';
+import { appName } from '../../../appName';
 
 const UserConfirmations = (props) => {
 	return (
@@ -14,16 +15,16 @@ const UserConfirmations = (props) => {
 					className="Icon BackIcon"
 					onClick={props.prevStepHandler}
 				/>
-				<TwitterIcon className="Icon" />
+				<Logo className="Icon" />
 				<Button onClick={props.nextStepHandler}>Next</Button>
 			</div>
 			<div className="ModalContent">
 				<h2>Customize your experience</h2>
 
-				<h3>Track where you see Twitter content across the web</h3>
+				<h3>Track where you see {appName} content across the web</h3>
 				<div className="TrackingCheckBox">
 					<label htmlFor="userConfirm">
-						Twitter uses this data to personalise your experience. This web
+						{appName} uses this data to personalise your experience. This web
 						browsing history will never be stored with your name, email, or
 						phone number.
 					</label>

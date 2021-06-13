@@ -1,15 +1,15 @@
 import React from 'react';
-import TwitterIcon from '@material-ui/icons/Twitter';
 
 import './SignUp.css';
 import Button from '../../../components/Button/Button';
 import AuthInput from '../AuthInput';
+import Logo from '../../../Logo';
 
 const UserDetails = (props) => {
 	return (
 		<div className="UserDetails">
 			<div className="ModalHeader">
-				<TwitterIcon className="Icon" />
+				<Logo className="Icon" />
 				<Button
 					disabled={
 						!props.values.name.valid ||

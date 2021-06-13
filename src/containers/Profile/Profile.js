@@ -24,10 +24,11 @@ import ReplyPost from '../Post/ReplyPost';
 import CompletePost from '../Post/CompletePost/CompletePost';
 import Links from './Links/Links';
 import EditProfile from './EditProfile/EditProfile';
+import { appName } from '../../appName';
 
 class Profile extends Component {
 	state = {
-		tabSelected: 'Tweets',
+		tabSelected: `${appName}s`,
 		currentPosts: [],
 		tweets: [],
 		tweetsAndReplies: [],
@@ -96,7 +97,7 @@ class Profile extends Component {
 					...this.props.profile.quoteTweets,
 					...this.props.profile.comments
 				)
-				.filter((t) => t.media)
+				.filter((t) => t.images.length)
 				.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
 			const likes = this.props.profile.likes
@@ -138,13 +139,13 @@ class Profile extends Component {
 				likes.unshift(pinnedTweet);
 			}
 
-			const tabSelected = prevState.tabSelected || 'Tweets';
+			const tabSelected = prevState.tabSelected || `${appName}s`;
 
 			let currentPosts = null;
 
-			if (tabSelected === 'Tweets') {
+			if (tabSelected === `${appName}s`) {
 				currentPosts = tweets;
-			} else if (tabSelected === 'Tweets & Replies') {
+			} else if (tabSelected === `${appName}s & Replies`) {
 				currentPosts = tweetsAndReplies;
 			} else if (tabSelected === 'Media') {
 				currentPosts = media;
@@ -168,10 +169,10 @@ class Profile extends Component {
 		if (this.state.tabSelected === tabName || !this.props.profile) return;
 		let updatedPosts = null;
 		switch (tabName) {
-			case 'Tweets':
+			case appName:
 				updatedPosts = this.state.tweets;
 				break;
-			case 'Tweets & Replies':
+			case `${appName}s & Replies`:
 				updatedPosts = this.state.tweetsAndReplies;
 				break;
 			case 'Media':
@@ -441,7 +442,7 @@ class Profile extends Component {
 												this.props.profile.comments.length
 									  )
 									: 0}
-								{' Tweets'}
+								{` ${appName}`}
 							</p>
 						</div>
 					</div>
@@ -462,8 +463,8 @@ class Profile extends Component {
 						{this.props.profile ? (
 							<HorizontalTabs
 								tabs={[
-									{ name: 'Tweets' },
-									{ name: 'Tweets & Replies' },
+									{ name: `${appName}s` },
+									{ name: `${appName}s & Replies` },
 									{ name: 'Media' },
 									{ name: 'Likes' },
 								]}

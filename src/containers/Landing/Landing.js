@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Link, Redirect, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-import TwitterIcon from '@material-ui/icons/Twitter';
+// import Logo from '@material-ui/icons/Twitter';
+import Logo from '../../Logo';
 
 import classes from './Landing.module.css';
 import Button from '../../components/Button/Button';
 import SignUp from '../Auth/SignUp/SignUp';
+import { appName } from '../../appName';
 // import Spinner from '../../components/Spinner/Spinner';
 
 class Landing extends Component {
@@ -26,7 +28,7 @@ class Landing extends Component {
 		if (this.props.loading && this.props.location.pathname !== '/signup')
 			spinner = (
 				<div className={classes.FullSpinner}>
-					<TwitterIcon className={classes.Icon} />
+					<Logo size={54} className={classes.Icon} />
 				</div>
 			);
 
@@ -39,14 +41,14 @@ class Landing extends Component {
 						<img
 							className={classes.HeroImg}
 							src="https://abs.twimg.com/sticky/illustrations/lohp_en_850x623.png"
-							alt="Landing Twitter"
+							alt="Landing Page"
 						/>
-						<TwitterIcon className={classes.SideTwitterIcon} />
+						<Logo size={160} color="#fff" className={classes.SideTwitterIcon} />
 					</div>
 					<div className={classes.WhatsHappenning}>
-						<TwitterIcon className={classes.Icon} />
+						<Logo size={54} className={classes.Icon} />
 						<h1>Happening now</h1>
-						<h3>Join Twitter today.</h3>
+						<h3>Join {appName} today.</h3>
 						<div className={classes.ActionButtons}>
 							<Button width={80} btnBlock onClick={this.signUpBtnHandler}>
 								Sign up
@@ -76,12 +78,12 @@ class Landing extends Component {
 						<Link to="/">Brand Resources</Link>
 						<Link to="/">Advertising</Link>
 						<Link to="/">Marketing</Link>
-						<Link to="/">Twitter for Business</Link>
+						<Link to="/">{appName} for Business</Link>
 						<Link to="/">Developers</Link>
 						<Link to="/">Directory</Link>
 						<Link to="/">Settings</Link>
 					</div>
-					<p>© 2021 Twitter, Inc.</p>
+					<p>© 2021 {appName}, Inc.</p>
 				</div>
 				<Route path="/signup" component={SignUp} />
 			</div>

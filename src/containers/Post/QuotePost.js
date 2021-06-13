@@ -5,6 +5,7 @@ import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 
 import classes from './QuotePost.module.css';
 import timeDifference from '../../utility/timeDifference';
+import { appName } from '../../appName';
 
 const QuotePost = (props) => {
 	let tweetUnavailable = false;
@@ -12,7 +13,7 @@ const QuotePost = (props) => {
 		tweetUnavailable = true;
 	}
 	let tweetContent = (
-		<p className={classes.TweetUnavailable}>This tweet is not available</p>
+		<p className={classes.TweetUnavailable}>This {appName} is not available</p>
 	);
 	if (!tweetUnavailable) {
 		tweetContent = (

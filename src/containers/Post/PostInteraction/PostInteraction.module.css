@@ -8,9 +8,8 @@
 	border-bottom: 0.1rem solid #000;
 }
 
-.ModalHeader .TwitterIcon {
+.ModalHeader .Logo {
 	color: var(--twitter-color);
-	font-size: 1.5rem;
 }
 
 .ModalContent {

@@ -51,10 +51,6 @@ class Links extends Component {
 		this.setState({ tabSelected: tabName.toLowerCase() });
 	};
 
-	componentWillUnmount() {
-		console.log('Unmount');
-	}
-
 	goBack = (event) => {
 		event.stopPropagation();
 		this.props.history.goBack();

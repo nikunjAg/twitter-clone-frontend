@@ -15,6 +15,7 @@ import QuotePost from './QuotePost';
 import PostInteraction from './PostInteraction/PostInteraction';
 import ImagePreview from '../../components/ImagePreview/ImagePreview';
 import Backdrop from '../../components/Backdrop/Backdrop';
+import { appName } from '../../appName';
 
 /**
  * PROPS MEANING
@@ -154,7 +155,9 @@ class Post extends Component {
 							>
 								{this.props.post.postedBy.name}
 							</Link>
-							{this.props.post.isQuotePost ? ' Retweeted' : ' Liked'}
+							{this.props.post.isQuotePost
+								? ` Re${appName.toLowerCase()}ed`
+								: ' Liked'}
 						</p>
 					) : null}
 

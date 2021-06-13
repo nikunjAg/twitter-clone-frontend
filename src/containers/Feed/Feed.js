@@ -4,6 +4,7 @@ import classes from './Feed.module.css';
 import Post from '../Post/Post';
 import Spinner from '../../components/Spinner/Spinner';
 import ReplyPost from '../Post/ReplyPost';
+import { appName } from '../../appName';
 
 class Feed extends Component {
 	render() {
@@ -34,8 +35,9 @@ class Feed extends Component {
 				<div className={classes.NoFeed}>
 					<h3>Write a Post, Follow Someone</h3>
 					<p>
-						Feed are tweets which are posted or interacted by you or by someone
-						you follow. Get Started with your tweets or following someone.
+						Feed are {appName}s which are posted or interacted by you or by
+						someone you follow. Get Started with your {appName}s or following
+						someone.
 					</p>
 				</div>
 			);

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import TwitterIcon from '@material-ui/icons/Twitter';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
@@ -8,6 +7,8 @@ import AuthInput from '../AuthInput';
 import Button from '../../../components/Button/Button';
 import Spinner from '../../../components/Spinner/Spinner';
 import * as actionCreator from '../../../store/actions';
+import Logo from '../../../Logo';
+import { appName } from '../../../appName';
 
 class Login extends Component {
 	state = {
@@ -150,9 +151,9 @@ class Login extends Component {
 			<div className={classes.Login}>
 				{userRedirection}
 				<Link to="/">
-					<TwitterIcon className={classes.Icon} />
+					<Logo className={classes.Icon} />
 				</Link>
-				<h2>Log in to Twitter</h2>
+				<h2>Log in to {appName}</h2>
 				<form className={classes.LoginForm} onSubmit={this.onLoginHandler}>
 					{inputs}
 					<Button
@@ -167,7 +168,7 @@ class Login extends Component {
 				<div className={classes.OneLiner}>
 					<Link to="/">Forgot Password?</Link>
 					<p>·</p>
-					<Link to="/signup">Sign up for Twitter</Link>
+					<Link to="/signup">Sign up for {appName}</Link>
 				</div>
 			</div>
 		);

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import TwitterIcon from '@material-ui/icons/Twitter';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderRoundedIcon from '@material-ui/icons/FavoriteBorderRounded';
 import ModeCommentIcon from '@material-ui/icons/ModeComment';
@@ -18,6 +17,8 @@ import Post from '../Post';
 import Dropdown from '../../../components/Dropdown/Dropdown';
 import * as actionCreator from '../../../store/actions';
 import { convertToInternationalCurrencySystem } from '../../../utility/numberFormatter';
+import Logo from '../../../Logo';
+import { appName } from '../../../appName';
 
 /**
  * PROPS MEANING
@@ -30,12 +31,12 @@ import { convertToInternationalCurrencySystem } from '../../../utility/numberFor
 
 const retweetDropdownItems = [
 	{
-		value: 'Retweet',
+		value: `Re${appName}`,
 		icon: <RepeatIcon />,
 		type: 'retweet',
 	},
 	{
-		value: 'Quote tweet',
+		value: `Quote ${appName}`,
 		icon: <CreateIcon />,
 		type: 'quote tweet',
 	},
@@ -83,10 +84,10 @@ class PostInteraction extends Component {
 		console.log('Hello');
 		if (event.target.classList.contains(classes.IsRetweeted)) {
 			// Show dropdown with Delete Retweet and create another quote tweet options
-			retweetDropdownItems[0].value = 'Delete Retweet';
+			retweetDropdownItems[0].value = `Delete ${appName}`;
 			retweetDropdownItems[0].type = 'deleteRetweet';
 		} else {
-			retweetDropdownItems[0].value = 'Retweet';
+			retweetDropdownItems[0].value = `Re${appName}`;
 			retweetDropdownItems[0].type = 'retweet';
 		}
 
@@ -177,7 +178,7 @@ class PostInteraction extends Component {
 				<Backdrop>
 					<Modal onModalClose={this.onModalCloseHandler}>
 						<div className={classes.ModalHeader}>
-							<TwitterIcon className={classes.TwitterIcon} />
+							<Logo className={classes.Logo} />
 						</div>
 						<div className={classes.ModalContent}>
 							<div className={classes.MContent}>

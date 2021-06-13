@@ -12,6 +12,7 @@ import MoreDropdown from '../../../components/MoreDropdown/MoreDropdown';
 import * as actionCreator from '../../../store/actions';
 import Modal from '../../../components/Modal/Modal';
 import Backdrop from '../../../components/Backdrop/Backdrop';
+import { appName } from '../../../appName';
 
 /**
  * This component is for the MoreIcons available in the post
@@ -82,12 +83,12 @@ class PostFunctions extends Component {
 	render() {
 		const ownerPostFunctions = [
 			{
-				value: 'Delete Tweet',
+				value: `Delete ${appName}`,
 				icon: <DeleteIcon />,
 				type: 'deleteTweet',
 			},
 			{
-				value: (this.isPinnedPost() ? 'Unpin' : 'Pin') + ' this tweet',
+				value: (this.isPinnedPost() ? 'Unpin' : 'Pin') + ` this ${appName}`,
 				icon: this.isPinnedPost() ? <RoomTwoToneIcon /> : <PlaceIcon />,
 				type: 'pinTweet',
 			},
@@ -113,7 +114,7 @@ class PostFunctions extends Component {
 
 		const modalContent = {
 			deleteTweet: {
-				heading: 'Delete Tweet?',
+				heading: `Delete ${appName}?`,
 				content:
 					'This can’t be undone and it will be removed from your profile, the timeline of any accounts that follow you, and from Twitter search results. ',
 				select: 'Delete',
@@ -121,21 +122,21 @@ class PostFunctions extends Component {
 			},
 			pinTweet: {
 				heading: this.isPinnedPost()
-					? 'Unpin Tweet from profile?'
-					: 'Pin Tweet to profile?',
+					? `Unpin ${appName} from profile?`
+					: `Pin ${appName} to profile?`,
 				content: this.isPinnedPost()
 					? 'This will no longer appear automatically at the top of your profile. '
-					: 'This will appear at the top of your profile and replace any previously pinned Tweet. ',
+					: `This will appear at the top of your profile and replace any previously pinned ${appName}. `,
 				select: this.isPinnedPost() ? 'Unpin' : 'Pin',
 				selectedHandler: this.pinTweetHandler,
 			},
 			bookmarkTweet: {
 				heading: this.isBookmarkedPost()
-					? 'Remove Bookmark from Tweet?'
-					: 'Add Bookmark to Tweet?',
+					? `Remove Bookmark from ${appName}`
+					: `Add Bookmark to ${appName}?`,
 				content: this.isBookmarkedPost()
-					? 'This tweet will no longer appear in your bookmarked tweets list.'
-					: 'This will appear in your bookmarked tweets list.',
+					? `This ${appName} will no longer appear in your bookmarked ${appName}s list.`
+					: `This will appear in your bookmarked ${appName}s list.`,
 				select: this.isBookmarkedPost() ? 'Remove' : 'Bookmark',
 				selectedHandler: this.bookmarkTweetHandler,
 			},

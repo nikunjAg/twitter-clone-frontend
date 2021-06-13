@@ -17,6 +17,7 @@ import { getPostTime } from '../../../utility/timeDifference';
 import PostFunctions from '../PostFunctions/PostFunctions';
 import ImagePreview from '../../../components/ImagePreview/ImagePreview';
 import Backdrop from '../../../components/Backdrop/Backdrop';
+import { appName } from '../../../appName';
 
 class CompletePost extends Component {
 	state = {
@@ -167,11 +168,11 @@ class CompletePost extends Component {
 					<div className={classes.PostActivity}>
 						<p>
 							<b>{this.props.post.retweets.length}</b>
-							<span>Retweets</span>
+							<span>Re{appName.toLowerCase()}</span>
 						</p>
 						<p>
 							<b>{this.props.post.quotePosts.length}</b>
-							<span>Quote Tweets</span>
+							<span>Quote {appName}s</span>
 						</p>
 						<p>
 							<b>{this.props.post.likes.length}</b>
@@ -220,7 +221,7 @@ class CompletePost extends Component {
 							onClick={this.goBack}
 							className={classes.BackIcon}
 						/>
-						<h3 onClick={this.windowScrollToTop}>Tweet</h3>
+						<h3 onClick={this.windowScrollToTop}>{appName}</h3>
 					</div>
 					{this.props.loading ? (
 						<div className={classes.SpinnerWrapper}>

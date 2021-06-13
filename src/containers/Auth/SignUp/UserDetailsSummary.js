@@ -1,10 +1,10 @@
 import React from 'react';
-import TwitterIcon from '@material-ui/icons/Twitter';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import Button from '../../../components/Button/Button';
 
 import './SignUp.css';
 import AuthInput from '../AuthInput';
+import Logo from '../../../Logo';
 
 const UserDetailsSummary = (props) => {
 	return (
@@ -14,7 +14,7 @@ const UserDetailsSummary = (props) => {
 					className="Icon BackIcon"
 					onClick={props.prevStepHandler}
 				/>
-				<TwitterIcon className="Icon" />
+				<Logo className="Icon" />
 				<Button onClick={props.nextStepHandler}>Next</Button>
 			</div>
 			<div className="ModalContent">

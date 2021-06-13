@@ -8,9 +8,10 @@ import SentimentSatisfiedOutlinedIcon from '@material-ui/icons/SentimentSatisfie
 import DateRangeOutlinedIcon from '@material-ui/icons/DateRangeOutlined';
 import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined';
 
-import Button from '../Button/Button';
 import 'pell/dist/pell.css';
 import './Editor.css';
+import Button from '../Button/Button';
+import { appName } from '../../appName';
 
 function placeCaretAtEnd(el, content) {
 	el.querySelector('.pell-content').focus();
@@ -191,7 +192,7 @@ class Editor extends Component {
 						disabled={this.props.html.length === 0}
 						onClick={this.props.onPost}
 					>
-						Tweet
+						{appName}
 					</Button>
 					{this.props.showEmojiPicker ? (
 						<EmojiPicker

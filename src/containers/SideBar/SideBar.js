@@ -5,13 +5,14 @@ import Avatar from '@material-ui/core/Avatar';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import HomeIcon from '@material-ui/icons/Home';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
-import TwitterIcon from '@material-ui/icons/Twitter';
 
 import classes from './SideBar.module.css';
 import Navigation from '../../components/Navigation/Navigation';
 import Button from '../../components/Button/Button';
 import Dropdown from '../../components/Dropdown/Dropdown';
 import * as actionCreator from '../../store/actions';
+import Logo from '../../Logo';
+import { appName } from '../../appName';
 
 const moreDropdownItems = [
 	{
@@ -56,7 +57,7 @@ class SideBar extends Component {
 		return (
 			<div className={classes.SideBar}>
 				<Link to="/home">
-					<TwitterIcon className={classes.Logo} />
+					<Logo size={54} className={classes.Logo} />
 				</Link>
 				<Navigation
 					username={this.props.username}
@@ -64,8 +65,8 @@ class SideBar extends Component {
 					addOn={this.props.addOn}
 				/>
 				<Button type="button" btnBlock width={100} fontSize={1}>
-					<HomeIcon />
-					<p>Tweet</p>
+					<Logo className="" size={22} color="#fff" />
+					<p>{appName}</p>
 				</Button>
 				<div
 					className={classes.Profile}
