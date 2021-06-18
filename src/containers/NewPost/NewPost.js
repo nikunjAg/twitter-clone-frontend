@@ -5,6 +5,7 @@ import Avatar from '@material-ui/core/Avatar';
 import classes from './NewPost.module.css';
 import Editor from '../../components/Editor/Editor';
 import { getBorderStyleWithProps } from '../../utility/styleWithProps';
+import { serverBaseURL } from '../../axios';
 
 class NewPost extends Component {
 	state = {
@@ -63,7 +64,7 @@ class NewPost extends Component {
 			>
 				<Avatar
 					className={classes.AccountIcon}
-					src={`http://localhost:8080${this.props.profileImage}`}
+					src={`${serverBaseURL}${this.props.profileImage}`}
 					alt="Profile Pic"
 				/>
 				<div className={classes.Post}>
