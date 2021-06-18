@@ -25,6 +25,7 @@ import CompletePost from '../Post/CompletePost/CompletePost';
 import Links from './Links/Links';
 import EditProfile from './EditProfile/EditProfile';
 import { appName } from '../../appName';
+import { serverBaseURL } from '../../axios';
 
 class Profile extends Component {
 	state = {
@@ -277,7 +278,7 @@ class Profile extends Component {
 					<div className={classes.ProfileActions}>
 						<div className={classes.ProfileImage}>
 							<img
-								src={`http://localhost:8080${
+								src={`${serverBaseURL}${
 									this.props.profile.profileImage !== ''
 										? this.props.profile.profileImage
 										: '/images/defaultProfilePic.png'
@@ -449,7 +450,7 @@ class Profile extends Component {
 					<div className={classes.ProfileDetails}>
 						<div className={classes.ProfileBanner}>
 							<img
-								src={`http://localhost:8080${
+								src={`${serverBaseURL}${
 									this.props.profile && this.props.profile.coverImage !== ''
 										? this.props.profile.coverImage
 										: '/images/defaultProfilePic.png'

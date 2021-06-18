@@ -4,6 +4,7 @@ import Avatar from '@material-ui/core/Avatar/Avatar';
 
 import classes from './User.module.css';
 import Button from '../Button/Button';
+import { serverBaseURL } from '../../axios';
 
 // Here in props we should get the use basic information
 // user prop -> user details which we want to display
@@ -22,7 +23,7 @@ const User = (props) => {
 				className={classes.ProfileImage}
 			>
 				<Avatar
-					src={`http://localhost:8080${
+					src={`${serverBaseURL}${
 						props.user && props.user.profileImage !== ''
 							? props.user.profileImage
 							: '/images/defaultProfilePic.png'

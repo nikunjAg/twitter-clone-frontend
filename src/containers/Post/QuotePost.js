@@ -6,6 +6,7 @@ import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import classes from './QuotePost.module.css';
 import timeDifference from '../../utility/timeDifference';
 import { appName } from '../../appName';
+import { serverBaseURL } from '../../axios';
 
 const QuotePost = (props) => {
 	let tweetUnavailable = false;
@@ -22,7 +23,7 @@ const QuotePost = (props) => {
 					<Link to={`/profile/${props.post.postedBy.username}`}>
 						<Avatar
 							className={classes.Avatar}
-							src={`http://localhost:8080${
+							src={`${serverBaseURL}${
 								props.post.postedBy.profileImage !== ''
 									? props.post.postedBy.profileImage
 									: '/images/defaultProfilePic.png'

@@ -18,6 +18,7 @@ import PostFunctions from '../PostFunctions/PostFunctions';
 import ImagePreview from '../../../components/ImagePreview/ImagePreview';
 import Backdrop from '../../../components/Backdrop/Backdrop';
 import { appName } from '../../../appName';
+import { serverBaseURL } from '../../../axios';
 
 class CompletePost extends Component {
 	state = {
@@ -88,7 +89,7 @@ class CompletePost extends Component {
 							className={classes.ProfileIcon}
 						>
 							<Avatar
-								src={`http://localhost:8080${
+								src={`${serverBaseURL}${
 									this.props.post.postedBy.profileImage !== ''
 										? this.props.post.postedBy.profileImage
 										: '/images/defaultProfilePic.png'
@@ -145,7 +146,7 @@ class CompletePost extends Component {
 									className={classes.PostImageDiv}
 									onClick={this.showImagePreviewHandler.bind(null, i)}
 								>
-									<img alt="Post Pic" src={`http://localhost:8080${i}`} />
+									<img alt="Post Pic" src={`${serverBaseURL}${i}`} />
 								</div>
 							))}
 						</div>

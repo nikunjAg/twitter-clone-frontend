@@ -9,6 +9,7 @@ import Modal from '../../../components/Modal/Modal';
 import Input from '../../../components/Input/Input';
 import ImageCropper from '../../ImageCropper/ImageCropper';
 import { dataURItoBlob } from '../../../utility/imageUpload';
+import { serverBaseURL } from '../../../axios';
 
 class EditProfile extends Component {
 	state = {
@@ -226,7 +227,7 @@ class EditProfile extends Component {
 											<img
 												src={
 													!this.state.coverImage
-														? `http://localhost:8080${
+														? `${serverBaseURL}${
 																this.props.profile.coverImage !== ''
 																	? this.props.profile.coverImage
 																	: '/images/defaultProfilePic.png'
@@ -254,7 +255,7 @@ class EditProfile extends Component {
 											<img
 												src={
 													!this.state.profileImage
-														? `http://localhost:8080${
+														? `${serverBaseURL}${
 																this.props.profile.profileImage !== ''
 																	? this.props.profile.profileImage
 																	: '/images/defaultProfilePic.png'

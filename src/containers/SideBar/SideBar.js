@@ -13,6 +13,7 @@ import Dropdown from '../../components/Dropdown/Dropdown';
 import * as actionCreator from '../../store/actions';
 import Logo from '../../Logo';
 import { appName } from '../../appName';
+import { serverBaseURL } from '../../axios';
 
 const moreDropdownItems = [
 	{
@@ -75,7 +76,7 @@ class SideBar extends Component {
 					{/* <Link to={`/profile/${this.props.username}`}> */}
 					<Avatar
 						className={classes.ProfileIcon}
-						src={`http://localhost:8080${
+						src={`${serverBaseURL}${
 							this.props.profileImage !== ''
 								? this.props.profileImage
 								: '/images/defaultProfilePic.png'

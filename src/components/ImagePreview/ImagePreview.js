@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined';
 
 import classes from './ImagePreview.module.css';
+import { serverBaseURL } from '../../axios';
 
 const ImagePreview = (props) => {
 	const node = useRef();
@@ -33,7 +34,7 @@ const ImagePreview = (props) => {
 				className={classes.CloseIcon}
 				onClick={props.closePreview}
 			/>
-			<img src={`http://localhost:8080${props.src}`} alt="ImagePreview" />
+			<img src={`${serverBaseURL}${props.src}`} alt="ImagePreview" />
 		</div>
 	);
 };
