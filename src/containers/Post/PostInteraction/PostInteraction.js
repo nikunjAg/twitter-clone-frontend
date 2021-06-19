@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderRoundedIcon from '@material-ui/icons/FavoriteBorderRounded';
@@ -42,7 +42,7 @@ const retweetDropdownItems = [
 	},
 ];
 
-class PostInteraction extends Component {
+class PostInteraction extends PureComponent {
 	state = {
 		openRetweetDropdown: false,
 		showModal: false,
@@ -67,7 +67,6 @@ class PostInteraction extends Component {
 	};
 
 	createReply = (content, images) => {
-		console.log('Create a reply with content ' + content);
 		// Create a reply with this content and this.state.replyOnPost._id
 		this.props.onReplyToPost(
 			this.props.post._id,
@@ -81,7 +80,7 @@ class PostInteraction extends Component {
 	retweetIconClickHandler = (event) => {
 		event.stopPropagation();
 		if (this.props.isModalPost) return;
-		console.log('Hello');
+
 		if (event.target.classList.contains(classes.IsRetweeted)) {
 			// Show dropdown with Delete Retweet and create another quote tweet options
 			retweetDropdownItems[0].value = `Delete ${appName}`;
@@ -176,7 +175,10 @@ class PostInteraction extends Component {
 		if (this.state.showModal)
 			helperModal = (
 				<Backdrop>
-					<Modal onModalClose={this.onModalCloseHandler}>
+					<Modal
+						className={classes.PostInteractionModal}
+						onModalClose={this.onModalCloseHandler}
+					>
 						<div className={classes.ModalHeader}>
 							<Logo className={classes.Logo} />
 						</div>

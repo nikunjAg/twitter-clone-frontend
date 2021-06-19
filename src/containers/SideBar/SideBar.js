@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-import HomeIcon from '@material-ui/icons/Home';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 
 import classes from './SideBar.module.css';
@@ -46,14 +45,28 @@ class SideBar extends Component {
 	render() {
 		let moreDropdown = null;
 
-		moreDropdown = (
-			<Dropdown
-				posStyle={{ top: '0%', left: '100%', transform: 'translateY(-50%)' }}
-				items={moreDropdownItems}
-				onItemSelected={this.onItemTypeSelected}
-				handleCloseDropdown={this.closeMoreDropdown}
-			/>
-		);
+		if (this.state.for !== '') {
+			const posStyle = {
+				top: '0%',
+				left: '100%',
+				transform: 'translateY(-50%)',
+			};
+
+			if (this.state.for === 'forNavigation') {
+				posStyle.top = '50%';
+				posStyle.left = '100%';
+				posStyle.transform = '';
+			}
+
+			moreDropdown = (
+				<Dropdown
+					posStyle={posStyle}
+					items={moreDropdownItems}
+					onItemSelected={this.onItemTypeSelected}
+					handleCloseDropdown={this.closeMoreDropdown}
+				/>
+			);
+		}
 
 		return (
 			<div className={classes.SideBar}>
@@ -64,9 +77,12 @@ class SideBar extends Component {
 					username={this.props.username}
 					scrollHandler={this.props.scrollHandler}
 					addOn={this.props.addOn}
+					onClickMore={this.openMoreDropdownHandler}
+					dropdownFor={this.state.for}
+					dropdown={moreDropdown}
 				/>
 				<Button type="button" btnBlock width={100} fontSize={1}>
-					<Logo className="" size={22} color="#fff" />
+					<Logo className="" size={32} color="#fff" />
 					<p>{appName}</p>
 				</Button>
 				<div

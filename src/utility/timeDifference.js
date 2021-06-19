@@ -21,8 +21,8 @@ const timeDifference = (current, previous) => {
 		timeVal = Math.round(elapsed / msPerDay);
 		result = timeVal + ` day${timeVal === 1 ? '' : 's'} ago`;
 	} else if (elapsed < msPerYear) {
-		timeVal = Math.round(elapsed / msPerYear);
-		result = timeVal + ` year${timeVal === 1 ? '' : 's'} ago`;
+		timeVal = Math.round(elapsed / msPerMonth);
+		result = timeVal + ` month${timeVal === 1 ? '' : 's'} ago`;
 	} else {
 		timeVal = Math.round(elapsed / msPerYear);
 		result = timeVal + ` year${timeVal === 1 ? '' : 's'} ago`;

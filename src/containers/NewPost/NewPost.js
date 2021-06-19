@@ -50,7 +50,6 @@ class NewPost extends Component {
 	};
 
 	onPostHandler = () => {
-		console.log(this.state.images);
 		const postContent = this.state.html;
 		this.props.onPost(postContent, this.state.images);
 		this.setState({ pickEmoji: false, html: '', images: [] });

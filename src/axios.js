@@ -1,5 +1,6 @@
 import axios from 'axios';
-const serverBaseURL = 'https://twitter-server-clone.herokuapp.com';
+// const serverBaseURL = 'https://twitter-server-clone.herokuapp.com';
+const serverBaseURL = 'http://localhost:8080';
 
 const instance = axios.create({
 	baseURL: serverBaseURL,

@@ -78,14 +78,17 @@ const Navigation = (props) => {
 				<PersonOutlineOutlinedIcon className={classes.Icon} />
 				<p>Profile</p>
 			</CustomNavLink>
-			<CustomNavLink
-				to="/more"
-				scrollHandler={scrollOnMatch}
-				location={props.location}
+			{/* As we only want a dropdown here
+					We don't need a link kind of a thing or scrollToTop
+			*/}
+			<div
+				className={classes.FakeLink}
+				onClick={props.onClickMore.bind(null, 'forNavigation')}
 			>
 				<MoreHorizSharpIcon className={classes.Icon} />
 				<p>More</p>
-			</CustomNavLink>
+				{props.dropdownFor === 'forNavigation' ? props.dropdown : null}
+			</div>
 		</div>
 	);
 };

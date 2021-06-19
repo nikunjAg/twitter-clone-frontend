@@ -14,7 +14,7 @@ const Backdrop = (props) => {
 				background: props.background ? props.background : 'rgba(0, 0, 0, 0.26)',
 				width: '100%',
 				height: '100vh',
-				zIndex: props.zIndex ? props.zIndex : '20',
+				zIndex: props.zIndex ? props.zIndex : '120',
 				// pointerEvents: 'all',
 			}}
 		>

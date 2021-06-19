@@ -16,6 +16,29 @@
 	margin: 0 0.7rem;
 }
 
+.Navigation .FakeLink {
+	cursor: pointer;
+	position: relative;
+	color: var(--twitter-text-color);
+	background-color: transparent;
+	padding: 10px;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	transition: background-color 0.1s ease-out;
+}
+
+.Navigation .FakeLink:hover {
+	background-color: var(--light-twitter-color);
+	color: var(--twitter-color);
+}
+
+.Navigation .FakeLink.Active {
+	color: var(--twitter-color);
+}
+
 /* // #1da1f2 */
 /* 29 161 242 0.1 */
 

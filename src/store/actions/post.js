@@ -269,7 +269,7 @@ export const retweetOnPost = (postId, token) => {
 export const quoteOnPost = (postId, content, images, token) => {
 	return (dispatch) => {
 		const formData = new FormData();
-		formData.append(content, content);
+		formData.append('content', content);
 		for (let image of images) formData.append('images', image);
 
 		axios
@@ -311,7 +311,7 @@ export const replyOnPost = (postId, content, images, token) => {
 		// Here we need tosend a request to server for creating a reply
 
 		const formData = new FormData();
-		formData.append(content, content);
+		formData.append('content', content);
 		for (let image of images) formData.append('images', image);
 
 		axios

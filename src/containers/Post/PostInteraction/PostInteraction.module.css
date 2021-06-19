@@ -1,3 +1,7 @@
+.PostInteractionModal {
+	overflow: unset;
+}
+
 .ModalHeader {
 	display: flex;
 	flex-direction: row;
@@ -13,8 +17,8 @@
 }
 
 .ModalContent {
-	overflow-y: auto;
-	/* height: 76vh; */
+	/* overflow-y: auto; */
+	max-height: 76vh;
 }
 
 .MContent {

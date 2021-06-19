@@ -11,8 +11,7 @@
 
 .SideBar .Logo {
 	color: var(--twitter-color);
-	font-size: 3.3rem;
-	padding: 10px;
+	padding: 6px;
 }
 
 .SideBar .Logo:hover {
@@ -80,7 +79,7 @@
 	}
 
 	.SideBar button {
-		padding: 12px;
+		padding: 8px !important;
 		width: fit-content !important;
 		border-radius: 50%;
 	}

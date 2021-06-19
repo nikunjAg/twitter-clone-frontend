@@ -12,10 +12,16 @@ export const checkAndUpdatePost = (currentPost, newPost) => {
 		return currentPost;
 	} else if (currentPost._id.toString() === newPost._id.toString()) {
 		// Then we have to directly update this post
+		// If the old comments of post are not populated means we are handling update for post array so we need to add updated comment
+		// Else means we are handling update for currentPost(Complete Post)
+		// Here we need to add old comments as they are populated with data
 		return {
 			...currentPost,
 			...newPost,
-			comments: currentPost.comments,
+			comments:
+				currentPost.comments.length && currentPost.comments[0]._id
+					? currentPost.comments
+					: newPost.comments,
 		};
 	} else if (
 		currentPost.isQuotePost &&

@@ -18,7 +18,6 @@ class Modal extends Component {
 
 	modalClickedHandler = (event) => {
 		event.stopPropagation();
-		console.log('Modal clicked but nothing beneath');
 	};
 
 	modalCloseHandler = (event) => {
@@ -30,7 +29,11 @@ class Modal extends Component {
 		return (
 			<div
 				ref={this.node}
-				className={'Modal ' + (this.props.smallModal ? 'SmallModal' : '')}
+				className={
+					(this.props.className ? this.props.className : '') +
+					' Modal ' +
+					(this.props.smallModal ? 'SmallModal' : '')
+				}
 				onClick={this.modalClickedHandler}
 				style={{
 					height: this.props.height ? this.props.height : '',
