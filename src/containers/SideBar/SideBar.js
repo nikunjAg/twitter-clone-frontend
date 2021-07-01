@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
@@ -87,7 +87,10 @@ class SideBar extends Component {
 				</Button>
 				<div
 					className={classes.Profile}
-					onClick={this.openMoreDropdownHandler.bind(null, 'forProfile')}
+					onClick={(event) => {
+						event.stopPropagation();
+						this.props.history.push(`/profile/${this.props.username}`);
+					}}
 				>
 					{/* <Link to={`/profile/${this.props.username}`}> */}
 					<Avatar
@@ -104,7 +107,10 @@ class SideBar extends Component {
 						<p className={classes.Name}>{this.props.name}</p>
 						<p className={classes.UserName}>{this.props.username}</p>
 					</div>
-					<MoreHorizIcon className={classes.ProfileMore} />
+					<MoreHorizIcon
+						className={classes.ProfileMore}
+						onClick={this.openMoreDropdownHandler.bind(null, 'forProfile')}
+					/>
 					{this.state.for === 'forProfile' ? moreDropdown : null}
 				</div>
 			</div>
@@ -126,4 +132,6 @@ const mapDispatchToProps = (dispatch) => {
 	};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SideBar);
+export default withRouter(
+	connect(mapStateToProps, mapDispatchToProps)(SideBar)
+);

@@ -108,36 +108,38 @@ class Profile extends Component {
 				}))
 				.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
-			let pinnedTweetIdx = tweets.findIndex(
-				(t) => t._id.toString() === this.props.pinnedTweet.toString()
-			);
-			if (pinnedTweetIdx !== -1) {
-				const pinnedTweet = tweets.splice(pinnedTweetIdx, 1)[0];
-				tweets.unshift(pinnedTweet);
-			}
+			if (this.props.pinnedTweet) {
+				let pinnedTweetIdx = tweets.findIndex(
+					(t) => t._id.toString() === this.props.pinnedTweet.toString()
+				);
+				if (pinnedTweetIdx !== -1) {
+					const pinnedTweet = tweets.splice(pinnedTweetIdx, 1)[0];
+					tweets.unshift(pinnedTweet);
+				}
 
-			pinnedTweetIdx = tweetsAndReplies.findIndex(
-				(t) => t._id.toString() === this.props.pinnedTweet.toString()
-			);
-			if (pinnedTweetIdx !== -1) {
-				const pinnedTweet = tweetsAndReplies.splice(pinnedTweetIdx, 1)[0];
-				tweetsAndReplies.unshift(pinnedTweet);
-			}
+				pinnedTweetIdx = tweetsAndReplies.findIndex(
+					(t) => t._id.toString() === this.props.pinnedTweet.toString()
+				);
+				if (pinnedTweetIdx !== -1) {
+					const pinnedTweet = tweetsAndReplies.splice(pinnedTweetIdx, 1)[0];
+					tweetsAndReplies.unshift(pinnedTweet);
+				}
 
-			pinnedTweetIdx = media.findIndex(
-				(t) => t._id.toString() === this.props.pinnedTweet.toString()
-			);
-			if (pinnedTweetIdx !== -1) {
-				const pinnedTweet = media.splice(pinnedTweetIdx, 1)[0];
-				media.unshift(pinnedTweet);
-			}
+				pinnedTweetIdx = media.findIndex(
+					(t) => t._id.toString() === this.props.pinnedTweet.toString()
+				);
+				if (pinnedTweetIdx !== -1) {
+					const pinnedTweet = media.splice(pinnedTweetIdx, 1)[0];
+					media.unshift(pinnedTweet);
+				}
 
-			pinnedTweetIdx = likes.findIndex(
-				(t) => t._id.toString() === this.props.pinnedTweet.toString()
-			);
-			if (pinnedTweetIdx !== -1) {
-				const pinnedTweet = likes.splice(pinnedTweetIdx, 1)[0];
-				likes.unshift(pinnedTweet);
+				pinnedTweetIdx = likes.findIndex(
+					(t) => t._id.toString() === this.props.pinnedTweet.toString()
+				);
+				if (pinnedTweetIdx !== -1) {
+					const pinnedTweet = likes.splice(pinnedTweetIdx, 1)[0];
+					likes.unshift(pinnedTweet);
+				}
 			}
 
 			const tabSelected = prevState.tabSelected || `${appName}s`;

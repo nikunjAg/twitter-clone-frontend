@@ -38,22 +38,22 @@ const Navigation = (props) => {
 				<SearchIcon className={classes.Icon} />
 				<p>Explore</p>
 			</CustomNavLink>
-			<CustomNavLink
+			{/* <CustomNavLink
 				to="/notifications"
 				scrollHandler={scrollOnMatch}
 				location={props.location}
 			>
 				<NotificationsOutlinedIcon className={classes.Icon} />
 				<p>Notifications</p>
-			</CustomNavLink>
-			<CustomNavLink
+			</CustomNavLink> */}
+			{/* <CustomNavLink
 				to="/messages"
 				scrollHandler={scrollOnMatch}
 				location={props.location}
 			>
 				<EmailOutlinedIcon className={classes.Icon} />
 				<p>Messages</p>
-			</CustomNavLink>
+			</CustomNavLink> */}
 			<CustomNavLink
 				to="/bookmarks"
 				scrollHandler={scrollOnMatch}
@@ -62,14 +62,14 @@ const Navigation = (props) => {
 				<BookmarkBorderOutlinedIcon className={classes.Icon} />
 				<p>Bookmarks</p>
 			</CustomNavLink>
-			<CustomNavLink
+			{/* <CustomNavLink
 				to="/list"
 				scrollHandler={scrollOnMatch}
 				location={props.location}
 			>
 				<ListAltRoundedIcon className={classes.Icon} />
 				<p>List</p>
-			</CustomNavLink>
+			</CustomNavLink> */}
 			<CustomNavLink
 				to={`/profile/${props.username}`}
 				scrollHandler={scrollOnMatch}
